@@ -1,0 +1,35 @@
+.customButton {
+  background: white;
+  color: rgb(95, 85, 236, 1);
+  font-size: 14px;
+  padding: 9.5px 20px;
+  border-radius: 8px;
+  border: 1px solid rgb(95, 85, 236, 1);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  box-shadow: 0 10px 25px rgba(127, 119, 241, 0.5);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.activeCustomButton {
+  background: rgb(95, 85, 236, 1);
+  color: white;
+  border: none;
+}
+
+.activeCustomButton:hover {
+  //   background: rgb(95, 85, 236, 0.9) !important;
+}
+
+.customButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

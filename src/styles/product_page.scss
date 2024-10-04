@@ -1,0 +1,172 @@
+.product_main_wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  .product_page_wrapper {
+    height: calc(100% - 107px);
+
+    .content_wrapper {
+      margin-top: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 0px 18px;
+
+      .filter {
+        height: 100%;
+        border-right: 1px solid #ccc;
+
+        .filter_header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          padding: 20px 0 20px 0;
+          .icon {
+            background: rgb(218, 218, 218);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600 !important;
+          }
+          > p {
+            width: 55%;
+            margin: 0;
+            font-weight: 600 !important;
+          }
+        }
+        .category_list {
+          height: calc(100% - 85px);
+          .list {
+            height: calc(100% - 340px);
+            overflow: auto;
+          }
+        }
+      }
+
+      .content {
+        height: 100%;
+        .flexStart {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 60px;
+          overflow-y: auto;
+        }
+        .myPropertyBody {
+          padding: 10px 40px;
+          background-color: #f7f9fb;
+          .main_table {
+            padding: 20px;
+            background: white;
+            border-radius: 13px !important;
+            margin: 0 auto;
+            width: 97% !important;
+            th:nth-of-type(1) {
+              width: 10%;
+            }
+            th:nth-of-type(2) {
+              width: 35%;
+            }
+            th:nth-of-type(3) {
+              width: 15%;
+            }
+            th:nth-of-type(4) {
+              width: 15%;
+            }
+            th:nth-of-type(5) {
+              width: 15%;
+            }
+          }
+
+          .card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 19%;
+            background-color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            border-radius: 15px;
+            width: calc(25% - -40px);
+            height: 350px;
+            transition: transform 0.3s ease;
+            // border: none;
+            .backgroundClass {
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              height: 100%;
+              width: 100%;
+              border-radius: 15px;
+              /* width: 100px; */
+              margin: 0 auto;
+              margin-top: 16px;
+              position: relative;
+
+              .icon {
+                position: absolute;
+                top: 0px;
+                right: 20px;
+                font-size: 16px;
+                font-weight: 500 !important;
+                background: rgb(218, 218, 218);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px 8px;
+              }
+            }
+            .cardFooter {
+              width: 100%;
+              padding: 10px 20px;
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              gap: 8px;
+              .first {
+                font-size: 16px;
+                font-weight: 400;
+                color: black;
+                text-transform: capitalize;
+                margin-top: 10px;
+              }
+              .second {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                margin: 0;
+                img {
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+          .card:hover {
+            transform: scale(1.02);
+          }
+        }
+        .propertySkelton {
+          padding: 10px !important;
+          .ant-skeleton-element {
+            width: 100%;
+            height: 100%;
+            .ant-skeleton-image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

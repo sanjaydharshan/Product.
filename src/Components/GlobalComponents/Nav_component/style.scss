@@ -1,0 +1,27 @@
+.nav_wrapper {
+  // width: 100%;
+  background-color: #fafbfc;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+
+  .main_logo {
+    height: 100%;
+    width: 165px;
+  }
+
+  .signup_wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @media screen and (max-width: 530px) {
+      display: none;
+    }
+    > span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
