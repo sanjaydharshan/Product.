@@ -6,7 +6,7 @@ const Button = (props) => {
     buttontext,
     handleClick,
     active,
-    disabled = false, // Default to false if not provided
+    disabled = false,
     styles = {},
     enterStyle = {},
     leaveStyle = {},
