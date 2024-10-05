@@ -14,6 +14,7 @@ import { useInView } from "react-intersection-observer";
 import { StarRating } from "./GlobalComponents/starrating";
 import { Button } from "./GlobalComponents/ButtonComponent/button";
 import { useNavigate } from "react-router-dom";
+import { calculateDiscountPercentage, truncateText } from "../Api/utiles";
 
 export default function Product() {
   const [ViewType, setViewType] = useState("gridView");
@@ -87,17 +88,6 @@ export default function Product() {
     }
   }, [inView]);
 
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.slice(0, maxLength) + "...";
-    }
-    return text;
-  };
-  const calculateDiscountPercentage = (originalPrice, discountedPrice) => {
-    const discount = originalPrice - discountedPrice;
-    const discountPercentage = (discount / originalPrice) * 100;
-    return discountPercentage.toFixed(0); // Returns the discount as a percentage with no decimals
-  };
   return (
     <div className="product_main_wrapper">
       <NavComponent type={""} />
@@ -173,6 +163,9 @@ export default function Product() {
                           key={`${index}`}
                           className="card"
                           // style={{ width: '100%', height: '100vh' }}
+                          onClick={(e) => {
+                            navigate(`/product/${item?.id}`);
+                          }}
                         >
                           <div
                             className="backgroundClass"

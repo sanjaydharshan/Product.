@@ -1,0 +1,51 @@
+.headingSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    // padding: 13px 40px;
+    background-color: white;
+    z-index: 10;
+    position: sticky;
+    top: -26px;
+  
+    span {
+      font-size: 22px;
+    }
+  
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+  
+      > span:nth-child(1) {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .leftSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .search {
+        height: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        display: flex;
+        // min-width: 24vw;
+        border-radius: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 480px;
+        padding: 12px 30px;
+        gap: 10px;
+        input {
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  

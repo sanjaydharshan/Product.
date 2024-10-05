@@ -55,32 +55,19 @@
           flex-wrap: wrap;
           gap: 60px;
           overflow-y: auto;
+          @media screen and (max-width: 1300px) {
+            gap: 30px;
+          }
+          @media screen and (max-width: 1100px) {
+            gap: 20px;
+          }
+          @media screen and (max-width: 950px) {
+            gap: 30px;
+          }
         }
         .myPropertyBody {
           padding: 10px 40px;
           background-color: #f7f9fb;
-          .main_table {
-            padding: 20px;
-            background: white;
-            border-radius: 13px !important;
-            margin: 0 auto;
-            width: 97% !important;
-            th:nth-of-type(1) {
-              width: 10%;
-            }
-            th:nth-of-type(2) {
-              width: 35%;
-            }
-            th:nth-of-type(3) {
-              width: 15%;
-            }
-            th:nth-of-type(4) {
-              width: 15%;
-            }
-            th:nth-of-type(5) {
-              width: 15%;
-            }
-          }
 
           .card {
             display: flex;
@@ -95,7 +82,25 @@
             width: calc(25% - -40px);
             height: 350px;
             transition: transform 0.3s ease;
-            // border: none;
+            border: none;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            @media screen and (max-width: 860px) {
+              width: calc(25% - -20px);
+              height: 300px;
+
+              .cardFooter {
+                .first {
+                  font-size: 12px !important;
+                }
+                .second {
+                  font-size: 12px !important;
+
+                  img {
+                    margin-top: 5px;
+                  }
+                }
+              }
+            }
             .backgroundClass {
               background-size: contain;
               background-repeat: no-repeat;

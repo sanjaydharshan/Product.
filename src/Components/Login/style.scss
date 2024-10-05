@@ -7,20 +7,25 @@
     position: relative;
     z-index: 1;
     margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     .field_wrapper {
       // width: 402px;
       max-width: 480px;
+      width: 480px;
       background: #fff;
       box-shadow: 0 24px 64px #26214a1a;
       border-radius: 12px;
-      padding: 30px 60px;
+      padding: 5px 60px;
       position: relative;
       margin: auto;
       @media screen and (max-width: 550px) {
-        width: 300px;
+        width: 418px;
       }
       @media screen and (max-width: 435px) {
-        width: 250px;
+        width: 310px;
         padding: 30px 30px;
       }
       > h1 {
@@ -173,6 +178,12 @@
       background-size: 100%;
       background-image: url(../../assets/login/login__bg-top.f55110285bf7cd54.svg);
       background-repeat: no-repeat;
+
+      @media screen and (height <= 700px) {
+        
+            background-size: 100% 50vh;
+        
+    }
     }
 
     &::before {

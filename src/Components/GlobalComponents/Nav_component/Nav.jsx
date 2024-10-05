@@ -17,8 +17,8 @@ export default function NavComponent(props) {
       <img src={LogoMain} className="main_logo"></img>
       {props?.type == "login" ? (
         <div className="signup_wrapper">
-          <span>Don't have an account?</span>
-          <Button buttontext={"Sign Up"} active />
+          {!props.signup?<span>Don't have an account?</span>:<span>Back To Login</span>}
+          <Button buttontext={!props.signup?"Sign Up":"Log In"} active handleClick={(e)=>{if(!props.signup){props.setsignup(true)}else{props.setsignup(false)}}} />
         </div>
       ) : (
         <Button
