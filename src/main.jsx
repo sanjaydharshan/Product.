@@ -4,6 +4,8 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { Routes } from "./Routes/Routes";
 import { useEffect } from "react";
+import { Toaster } from "sonner";
+
 const App = () => {
   // useEffect(() => {
   //   handleChnage('1');
@@ -13,6 +15,11 @@ const App = () => {
   //   document.body.style.zoom = `${Math.round(zoom)}%`;
   // };
   // window.addEventListener('resize', handleChnage);
-  return <RouterProvider router={Routes} />;
+  return (
+    <>
+      <Toaster richColors />
+      <RouterProvider router={Routes} />
+    </>
+  );
 };
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);

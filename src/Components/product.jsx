@@ -15,6 +15,7 @@ import { StarRating } from "./GlobalComponents/starrating";
 import { Button } from "./GlobalComponents/ButtonComponent/button";
 import { useNavigate } from "react-router-dom";
 import { calculateDiscountPercentage, truncateText } from "../Api/utiles";
+import { toast } from "sonner";
 
 export default function Product() {
   const [ViewType, setViewType] = useState("gridView");
@@ -242,6 +243,11 @@ export default function Product() {
                               <Button
                                 buttontext={"Add To Cart"}
                                 styles={{ width: "100%", boxShadow: "none" }}
+                                handleClick={(e) => {
+                                  e.stopPropagation();
+                                  e.preventDefault();
+                                  toast.success("Product added to cart!");
+                                }}
                               />
                             </div>
                           </div>
