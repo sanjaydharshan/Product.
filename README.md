@@ -3,6 +3,7 @@
 
 use node version 20.17.0
 
+npm install
 npm run dev 
 
 every thing is implemented with api except login and signup
